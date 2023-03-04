@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import random
 import argparse
-wordfile = open("word.txt")
+wordfile = open("words.txt")
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-w", type=int, default=4)
