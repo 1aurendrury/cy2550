@@ -1,0 +1,19 @@
+# Last Modified: Mon Apr  3 20:13:21 2023
+abi <abi/3.0>,
+
+include <tunables/global>
+
+/home/ldrury/p2 {
+  include <abstractions/base>
+  include <abstractions/nameservice> 
+  include <abstractions/user-tmp>
+
+  /etc/resolv.conf mrw,
+  /etc/{fstab,crontab} r,
+  /home/ldrury/p2 mr,
+  /home/ldrury/{template,.project2/config} mrw,
+  /proc/{version,buddyinfo} r,
+  /var/log/syslog rw,
+  deny /proc/meminfo r,
+  deny /etc/{host.conf,nsswitch.conf} r,
+}
